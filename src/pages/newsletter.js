@@ -7,7 +7,16 @@ const NewsLetter = () => {
         <div className="page-center">
           <h2>Get updates from us to your inbox</h2>
           <h4>I write to my friends every few weeks</h4>
-          <form action="" className="contact-form">
+          <form
+            action="/success"
+            name="testing-contact"
+            method="post"
+            netlify-honeypot="bot-field"
+            data-netlify="true"
+            className="contact-form"
+          >
+            <input type="hidden" name="bot-field" />
+            <input type="hidden" name="form-name" value="testing-contact" />
             <input
               type="text"
               name="name"
