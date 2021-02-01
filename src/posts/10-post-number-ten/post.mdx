@@ -1,0 +1,69 @@
+---
+title: Gatsby Tutorial
+slug: gatsby-tutorial
+image: ./images/gatsby-1.png
+date: 2021-01-24
+author: Tony Stark
+category: gatsby
+readTime: 16
+---
+
+import { Link } from 'gatsby'
+import { FiInfo } from 'react-icons/fi'
+import { Counter, LikeButton } from '../../components/Complete'
+
+## MDX 1st taste
+
+**Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente eaque sint expedita ducimus eius sunt, ut pariatur blanditiis magnam voluptatum ipsum necessitatibus at. Distinctio ipsa omnis reiciendis voluptas tenetur praesentium, aliquam,** consequatur obcaecati id atque dignissimos explicabo aspernatur maiores error expedita tempora nobis facere? Itaque id quo a, ipsam ipsum ratione, deleniti consequatur voluptas quos dolores qui blanditiis fuga suscipit facere temporibus rem aliquid necessitatibus nisi omnis facilis cupiditate! Necessitatibus illum odio distinctio dicta, vitae inventore, autem ullam odit architecto ipsam fuga suscipit qui atque modi aliquid quam voluptatem ea quos! Magnam repudiandae facere vero accusamus, _rem ea quis eligendi commodi dicta ex illo sapiente adipisci voluptas voluptatum reprehenderit, doloremque perferendis natus officiis ut delectus quasi. Commodi sequi ducimus officia impedit, quisquam doloribus pariatur in deleniti quasi, est autem qui cum ut temporibus_ nemo cupiditate nulla voluptas quam non numquam architecto quidem soluta repudiandae sit! Perspiciatis aliquid neque totam libero optio, dolorem enim, incidunt magni, distinctio minima quas laudantium obcaecati!
+
+<div className="code">
+
+```js
+const firstName = 'Bing'
+const lastName = 'lim'
+```
+
+</div>
+
+<div className="nice-text">
+    <h3>nice text</h3>
+    <FiInfo className="nice-text-icon"></FiInfo>
+
+consequatur obcaecati id atque dignissimos explicabo aspernatur maiores error expedita tempora nobis facere? Itaque id quo a, ipsam ipsum ratione, deleniti consequatur voluptas quos dolores qui blanditiis fuga suscipit facere temporibus rem aliquid necessitatibus nisi omnis facilis cupiditate! Necessitatibus illum odio distinctio dicta, vitae inventore, autem ullam odit architecto ipsam fuga suscipit qui atque modi aliquid quam
+
+</div>
+
+<h2>react components</h2>
+<Counter />
+
+```jsx
+mport React from "react"
+import styled from "styled-components"
+import { AiOutlineLike } from "react-icons/ai"
+const LikeButton = () => {
+  const [value, setValue] = React.useState(0)
+  return (
+    <Wrapper>
+      <div>
+        <button onClick={() => setValue(value + 1)}>
+          <AiOutlineLike />
+        </button>
+        <p>
+          Liked the post?
+          <br />
+          Click thumbs up few times
+        </p>
+      </div>
+      <span>+{value}</span>
+    </Wrapper>
+  )
+}
+```
+
+<LikeButton />
+
+![nice image](./images/gatsby-1.png)
+
+<Link to="/" className="btn center-btn">
+  Home
+</Link>

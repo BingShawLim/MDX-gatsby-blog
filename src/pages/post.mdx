@@ -1,0 +1,163 @@
+import { Link } from 'gatsby'
+import { FiInfo } from 'react-icons/fi'
+import { Counter, LikeButton, RegVideo, Video } from '../components/Complete'
+
+<section className="mdx-page">
+  <Link to="/" className="btn center-btn">
+  Home
+</Link>
+
+## MDX 1st taste
+
+**Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente eaque sint expedita ducimus eius sunt, ut pariatur blanditiis magnam voluptatum ipsum necessitatibus at. Distinctio ipsa omnis reiciendis voluptas tenetur praesentium, aliquam,** consequatur obcaecati id atque dignissimos explicabo aspernatur maiores error expedita tempora nobis facere? Itaque id quo a, ipsam ipsum ratione, deleniti consequatur voluptas quos dolores qui blanditiis fuga suscipit facere temporibus rem aliquid necessitatibus nisi omnis facilis cupiditate! Necessitatibus illum odio distinctio dicta, vitae inventore, autem ullam odit architecto ipsam fuga suscipit qui atque modi aliquid quam voluptatem ea quos! Magnam repudiandae facere vero accusamus, _rem ea quis eligendi commodi dicta ex illo sapiente adipisci voluptas voluptatum reprehenderit, doloremque perferendis natus officiis ut delectus quasi. Commodi sequi ducimus officia impedit, quisquam doloribus pariatur in deleniti quasi, est autem qui cum ut temporibus_ nemo cupiditate nulla voluptas quam non numquam architecto quidem soluta repudiandae sit! Perspiciatis aliquid neque totam libero optio, dolorem enim, incidunt magni, distinctio minima quas laudantium obcaecati!
+
+<div className="code">
+
+```js
+const firstName = 'Bing'
+const lastName = 'lim'
+```
+
+</div>
+
+<div className="nice-text">
+    <h3>nice text</h3>
+    <FiInfo className="nice-text-icon"></FiInfo>
+
+consequatur obcaecati id atque dignissimos explicabo aspernatur maiores error expedita tempora nobis facere? Itaque id quo a, ipsam ipsum ratione, deleniti consequatur voluptas quos dolores qui blanditiis fuga suscipit facere temporibus rem aliquid necessitatibus nisi omnis facilis cupiditate! Necessitatibus illum odio distinctio dicta, vitae inventore, autem ullam odit architecto ipsam fuga suscipit qui atque modi aliquid quam
+
+</div>
+
+<h2>react components</h2>
+<Counter />
+
+```jsx
+mport React from "react"
+import styled from "styled-components"
+import { AiOutlineLike } from "react-icons/ai"
+const LikeButton = () => {
+  const [value, setValue] = React.useState(0)
+  return (
+    <Wrapper>
+      <div>
+        <button onClick={() => setValue(value + 1)}>
+          <AiOutlineLike />
+        </button>
+        <p>
+          Liked the post?
+          <br />
+          Click thumbs up few times
+        </p>
+      </div>
+      <span>+{value}</span>
+    </Wrapper>
+  )
+}
+```
+
+<LikeButton />
+
+<h2>inline image</h2>
+
+![nice image](../assets/gatsby-1.png)
+
+<h2>videos</h2>
+<p>local video</p>
+<RegVideo />
+<p>iframe video</p>
+<Video />
+
+<h2>H2</h2>
+
+<h2 title>title true H2</h2>
+
+<h4>blockquotes</h4>
+
+<blockquote>
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, dolor
+  eum? Temporibus ipsam aperiam consequuntur ipsa debitis consectetur, hic rem
+  placeat, atque est qui praesentium!
+</blockquote>
+
+<blockquote display="default">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, dolor
+  eum? Temporibus ipsam aperiam consequuntur ipsa debitis consectetur, hic rem
+  placeat, atque est qui praesentium!
+</blockquote>
+
+<blockquote display="info">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, dolor
+  eum? Temporibus ipsam aperiam consequuntur ipsa debitis consectetur, hic rem
+  placeat, atque est qui praesentium!
+</blockquote>
+
+<blockquote display="warning">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, dolor
+  eum? Temporibus ipsam aperiam consequuntur ipsa debitis consectetur, hic rem
+  placeat, atque est qui praesentium!
+</blockquote>
+
+<h4>Code blocks</h4>
+
+#### Javascript
+
+```js
+// comments
+const name = 'john'
+const channel = 'coding addict'
+
+function featuredProducts(data) {
+  return data.filter(item => {
+    return item.featured === true
+  })
+}
+featuredProducts()
+```
+
+#### JSX
+
+```jsx
+import React from 'react'
+
+const Counter = () => {
+  const [count, setCount] = React.useState(0)
+  return (
+    <section className="counter">
+      <h4>show some love to MDX</h4>
+      <h4>likes {count}</h4>
+      <button className="btn btn-danger" onClick={() => setCount(count + 1)}>
+        i like mdx
+      </button>
+    </section>
+  )
+}
+export default Counter
+```
+
+#### HTML
+
+```html
+<h1>hello world</h1>
+<p class="random">random text</p>
+<section class="contact">
+  <div class="title">
+    <h1>contact us</h1>
+  </div>
+</section>
+```
+
+#### CSS
+
+```css
+max-width: 500px;
+border-radius: var(--radius);
+padding: 1rem 1.5rem;
+background: var(--clr-grey-10);
+text-align: center;
+```
+
+<Link to="/" className="btn center-btn">
+  Home
+</Link>
+
+</section>
